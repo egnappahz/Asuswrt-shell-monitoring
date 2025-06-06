@@ -29,3 +29,12 @@ Some instances report the temp with a 10°C offset. I saw the offset change duri
 
 # check_cpu_ssh_top.sh
 Hacky script that uses ncurses top to extract the cpu usage we need. Not the most ideal approach, but every busybox/linux device on the planet for some reason has top. Let's leverage this.
+
+# check_mem.sh
+Small nagios script I found somewhere and needed little adaptation monitor system memory on ASUSWRT routers.
+
+# check_disk.sh
+small script leveraging df on most linux systems, also the asusrouter.
+
+# blockinternetaccess.sh
+Take control of your LAN and block ips who are not allowed to traverse the gateway (=no internet), using iptables on the router.

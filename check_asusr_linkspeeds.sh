@@ -10,7 +10,6 @@ echo > /tmp/asuslinkspeed
 function calculate_iface {
 export name=$1
 fname=$(echo $name|sed 's/\./_/g')
-echo "$name became $fname"
 #input
 output_start=$(sudo ssh -p 11123 eggz@asusr "ifconfig $1")
 sleep 60
