@@ -1,5 +1,5 @@
 # Asuswrt-shell-monitoring
-ASUS TUF-BE3600 stock ssh shell access plugins, but probably compatible with all ASUSWRT based routers when they have ssh enabled.
+ASUS TUF-BE3600 (stock firmware!) ssh shell access plugins, but probably compatible with all ASUSWRT based routers when they have ssh enabled.
 
 This will showcase a short introduction in how much shell tools are available on the router on the stock firmware to get almost anything you need (monitoring,iptable scripts,...).
 
