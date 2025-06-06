@@ -19,6 +19,5 @@ wl0.1 ==> WLAN network 1 (2.4ghz)
 w1.1 ==> WLAN network 2 (5ghz)
 eth0 ==> main WAN plane
 eth1 ==> main LAN plane
-
-The "wl" devices might be the band or the "networks" you created in the GUI. For me, one network is only 2.4ghz and the other is only 5ghz.
 ```
+The "wl" devices might be the band or the "networks" you created in the GUI. For me, one network is only 2.4ghz and the other is only 5ghz.
