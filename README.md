@@ -31,7 +31,7 @@ Some instances report the temp with a 10°C offset. I saw the offset change duri
 Hacky script that uses ncurses top to extract the cpu usage we need. Not the most ideal approach, but every busybox/linux device on the planet for some reason has top. Let's leverage this.
 
 # check_mem.sh [NagiosPlugin]
-Small nagios script I found somewhere and needed little adaptation monitor system memory on ASUSWRT routers.
+Small nagios script I found somewhere and needed little adaptation to monitor system memory on ASUSWRT routers.
 
 # check_disk.sh [NagiosPlugin]
 small script leveraging df on most linux systems, also the asusrouter.
