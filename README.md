@@ -7,6 +7,7 @@ This is a feature always completely overlooked by any reviewer and might help li
 
 Its basicly a big promotional piece (and thank you) to ASUS, trying to highlight its most treasured (and forgotten) feature: ssh with shell access directly to the router. They did a good job there leaving most tools exposed to the user, and basicly no one even seems to know.
 
+Most of the script will be in the "nagios format", so actually also outputing performance stats. Please enjoy everything that is possible on the linux powered asus router.
 
 # check_asusr_linkspeeds.sh
 With the broadcom SoC, physical ports are not directly exposed. Due to the architecture of Broadcom-based consumer routers, physical Ethernet ports are typically not exposed as individual interfaces in the Linux networking stack. Instead, the switch ASIC (often integrated with the SoC) is abstracted behind a single aggregated interface.
@@ -21,3 +22,7 @@ eth0 ==> main WAN plane
 eth1 ==> main LAN plane
 ```
 The "wl" devices might be the band or the "networks" you created in the GUI. For me, one network is only 2.4ghz and the other is only 5ghz.
+
+# get_temperature.sh
+A small script that will get the temperature of the broadcom SoC.
+Some instances report the temp with a 10°C offset. I saw the offset change during an asusrouter firmware upgrade, thats the only reason I spotted this. So this may need adapting based on firmware.
