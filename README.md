@@ -26,3 +26,6 @@ The "wl" devices might be the band or the "networks" you created in the GUI. For
 # get_temperature.sh
 A small script that will get the temperature of the broadcom SoC.
 Some instances report the temp with a 10°C offset. I saw the offset change during an asusrouter firmware upgrade, thats the only reason I spotted this. So this may need adapting based on firmware.
+
+# check_cpu_ssh_top.sh
+Hacky script that uses ncurses top to extract the cpu usage we need. Not the most ideal approach, but every busybox/linux device on the planet for some reason has top. Let's leverage this.
