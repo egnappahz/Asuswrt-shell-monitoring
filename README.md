@@ -38,3 +38,16 @@ small script leveraging df on most linux systems, also the asusrouter.
 
 # blockinternetaccess.sh
 Take control of your LAN and block ips who are not allowed to traverse the gateway (=no internet), using iptables on the router.
+
+# asusr_clientspeeds_init.sh and check_asusr_clientspeeds.sh [NagiosPlugin]
+Inspired by https://github.com/VREMSoftwareDevelopment/bwmon
+
+
+Two scripts, ```asusr_clientspeeds_init.sh``` is ran on the router (injected by the main ```check_asusr_clientspeeds.sh``` script)
+It gets speeds per client, per direction and reports them for performance monitoring, leveraging iptables. It will automaticly do this:
+
+* disable Broadcom Packet Flow Cache learning (needed for accurate results, minimal performance impact)
+* auto add/delete any IPs on your network to report performance stats
+* create the appropriate chains and rules automaticly in iptables -- and cleaning up unused rules to keep things clean.
+
+*It tries to resolve hostnames from /etc/hosts since in my case the server is also the DNSmasq server so you probably want to adapt that.*
