@@ -40,8 +40,9 @@ if [ "$?" == "255" ]; then
 	echo "DEPENDANT: ssh timed out or is not working. "
 	exit 3
 fi
-us="$(ssh -p $port $user@$host top -bn3 | grep -e "Cpu(s)" -e "CPU:" | awk 'FNR == 3 {print $2}')"
-us="$(echo ${us//%})"
+idle="$(ssh -p $port $user@$host top -bn3 | grep -e "Cpu(s)" -e "CPU:" | awk 'FNR == 3 {print $8}')"
+idle="$(echo ${idle//%}|cut -d '.' -f1)"
+us=$(( 100 - $idle ))
 
 if [[ $(printf "%.0f\n" $us) -ge $warn ]]; then
 	exitc=1
